@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sohan.P.Rai E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Shop</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </header>
+
+    <section class="products">
+        <div class="product">
+            <img src="images/underarmour.jpeg" alt="product 1">
+            <h2>Under Armour Men Shoe</h2>
+            <p>Rs 18000.00</p>
+            <button onclick="showAddressForm()">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="images/Nike.jpeg" alt="product 2">
+            <h2>Nike Dunk High By You</h2>
+            <p>Rs 15000.00</p>
+            <button onclick="showAddressForm()">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="images/G-shock blue.jpeg" alt="G-shock Blue">
+            <h2>G-shock GA110-1B Men's</h2>
+            <p>Rs 11000.00</p>
+            <button onclick="showAddressForm()">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="images/g-shock red.jpeg" alt="G-shock red with bluetooth">
+            <h2>Casio GA-B001G-1AER G-Shock</h2>
+            <p>Rs 19000.00</p>
+            <button onclick="showAddressForm()">Buy Now</button>
+
+        </div>
+        <div class="product">
+            <img src="images/WhatsApp Image 2025-03-04 at 8.33.11 AM (2).jpeg" alt="G-shock red with bluetooth">
+            <h2>Men's T-Shirt</h2>
+            <p>Rs 1299.00</p>
+            <button onclick="showAddressForm()">Buy Now</button>
+
+        </div>
+        <div class="product">
+            <img src="images/WhatsApp Image 2025-03-04 at 8.33.11 AM (3).jpeg" alt="G-shock red with bluetooth">
+            <h2>Men's T-Shirt Blue</h2>
+            <p>Rs 999.00</p>
+            <button onclick="showAddressForm()">Buy Now</button>
+
+        </div>
+        <div class="product">
+            <img src="images/WhatsApp Image 2025-03-04 at 8.33.12 AM.jpeg" alt="G-shock red with bluetooth">
+            <h2>Men's Printed T-Shirt</h2>
+            <p>Rs 1900.00</p>
+            <button onclick="showAddressForm()">Buy Now</button>
+
+        </div>
+        <div class="product">
+            <img src="images/WhatsApp Image 2025-03-09 at 4.31.08 PM.jpeg" alt="G-shock red with" >
+        <h2>Casio Edifice EFR-571DC-2AVUDF Men's Watch </h2>
+            <p>Rs 12795.00</p>
+            <button onclick="showAddressForm()">Buy Now</button>
+
+        </div>
+
+    </div>
+    </section>
+    <!-- Address Form (Hidden Initially) -->
+    <div id="addressForm" class="hidden">
+        <h2>Enter Your Address</h2>
+        <form onsubmit="return placeOrder()">
+            <label>Full Name:</label>
+            <input type="text" required>
+
+            <label>Address:</label>
+            <input type="text" required>
+
+            <label>City:</label>
+            <input type="text" required>
+
+            <label>Postal Code:</label>
+            <input type="text" required>
+
+            <label>Phone Number:</label>
+            <input type="tel" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Order Confirmation Message -->
+    <div id="orderMessage" class="hidden">
+        <h2>Your order has been placed!</h2>
+    </div>
+
+    <script>
+        function showAddressForm() {
+            document.getElementById("addressForm").style.display = "block";
+        }
+
+        function placeOrder() {
+            document.getElementById("addressForm").style.display = "none";
+            document.getElementById("orderMessage").style.display = "block";
+            return false; // Prevent actual form submission
+        }
+    </script>
+</body>
+</html>
